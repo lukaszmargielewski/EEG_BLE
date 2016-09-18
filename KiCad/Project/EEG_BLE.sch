@@ -177,33 +177,27 @@ F 3 "" H 4200 1250 50  0000 C CNN
 	1    4200 1250
 	1    0    0    -1  
 $EndComp
-Text GLabel 3150 4950 0    60   Input ~ 0
-VREFP
-Text Notes 2200 5100 0    60   ~ 0
-Where does \nVREFP connect to?
-Text Notes 2250 4300 0    43   ~ 0
-Do SRB1 and SRB2 \nneed to be connected \nto something \n(in this bias drive setup)?
+Text Notes 2000 4500 0    47   ~ 0
+Can VREFP connect to AVDD \nand VREFN connect to AVSS \nsimply just like here?
+Text Notes 2000 4200 0    43   ~ 0
+Do SRB1 and SRB2 \nneed to be connected \nto something, f.ex: AVSS\n(in this bias drive setup)?
 Text Notes 1450 3300 0    39   ~ 0
 Do I need \nRC circuits\non electrodes?
-Text Notes 2950 2650 0    39   ~ 0
-Do I need to connect \nBIASINV to something?
-Text Notes 2900 1600 0    39   ~ 0
-Do BIASOUT and BIASIN \nneed to be connected \nand why?
 Text Notes 2000 1550 0    47   ~ 0
-What is the optimum \nresistor value \nfor this bias drive?
-Text Notes 8250 5450 0    59   ~ 0
+What are the optimum \nRC values\nfor this bias drive?
+Text Notes 7850 5150 0    59   ~ 0
 3.3v (regulated)
-Text Notes 8350 4750 0    59   ~ 0
+Text Notes 4700 5200 0    59   ~ 0
 5V (regulated)
 $Comp
 L Battery BATTERY
 U 1 1 57DE7944
-P 5300 5200
-F 0 "BATTERY" H 5400 5250 50  0000 L CNN
-F 1 "5V" H 5400 5150 50  0000 L CNN
-F 2 "" V 5300 5240 50  0000 C CNN
-F 3 "" V 5300 5240 50  0000 C CNN
-	1    5300 5200
+P 1500 5100
+F 0 "BATTERY" H 1600 5150 50  0000 L CNN
+F 1 "5V" H 1600 5050 50  0000 L CNN
+F 2 "" V 1500 5140 50  0000 C CNN
+F 3 "" V 1500 5140 50  0000 C CNN
+	1    1500 5100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -219,165 +213,155 @@ F 3 "" H 3800 2950 60  0001 C CNN
 $EndComp
 Text Notes 3800 2600 0    39   ~ 0
 Do I need BIASREf?\nAdvantages over internal?
-Text Notes 8350 4850 0    39   ~ 0
+Text Notes 4700 5300 0    39   ~ 0
 Is unipolar or bipolar better?
-Text Notes 8250 5600 0    43   ~ 0
+Text Notes 7850 5300 0    43   ~ 0
 Can it share ground \nwith analog supply?
-Text Notes 1400 1700 0    43   ~ 0
-Is capacitor \n(RC circuit)\nneeded here? \nHow to choose its value?
 Text Notes 1450 3550 0    39   ~ 0
-If YES, \nhow to choose \nRC values?
+If YES, \nhow to choose \nthe values?
 Text Notes 4600 4650 0    43   ~ 0
 Enought capacitors?\nWould ground and supply \nplanes be better instead?
 Text Notes 4250 1000 0    43   ~ 0
-Enought capacitros?\nWould ground and supply \nplanes be better instead?
+Enought capacitros?\nWould ground and supply planes be better instead?
 $Comp
 L C C?
 U 1 1 57DE8FE2
-P 7750 4800
-F 0 "C?" H 7775 4900 50  0000 L CNN
-F 1 "0.1uF" H 7775 4700 50  0000 L CNN
-F 2 "" H 7788 4650 50  0000 C CNN
-F 3 "" H 7750 4800 50  0000 C CNN
-	1    7750 4800
+P 4350 5250
+F 0 "C?" H 4375 5350 50  0000 L CNN
+F 1 "0.1uF" H 4375 5150 50  0000 L CNN
+F 2 "" H 4388 5100 50  0000 C CNN
+F 3 "" H 4350 5250 50  0000 C CNN
+	1    4350 5250
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C?
 U 1 1 57DE91C6
-P 6450 4700
-F 0 "C?" H 6475 4800 50  0000 L CNN
-F 1 "0.33uF" H 6475 4600 50  0000 L CNN
-F 2 "" H 6488 4550 50  0000 C CNN
-F 3 "" H 6450 4700 50  0000 C CNN
-	1    6450 4700
+P 3050 5150
+F 0 "C?" H 3075 5250 50  0000 L CNN
+F 1 "0.33uF" H 3075 5050 50  0000 L CNN
+F 2 "" H 3088 5000 50  0000 C CNN
+F 3 "" H 3050 5150 50  0000 C CNN
+	1    3050 5150
 	1    0    0    -1  
 $EndComp
-Text GLabel 8250 4550 2    39   Input ~ 0
+Text GLabel 4850 5000 2    39   Input ~ 0
 AVDD
-Text GLabel 8250 4950 2    39   Input ~ 0
+Text GLabel 4850 5400 2    39   Input ~ 0
 AVSS
 $Comp
 L C C?
 U 1 1 57DE9DA6
-P 6350 5450
-F 0 "C?" H 6375 5550 50  0000 L CNN
-F 1 "0.1uF" H 6375 5350 50  0000 L CNN
-F 2 "" H 6388 5300 50  0000 C CNN
-F 3 "" H 6350 5450 50  0000 C CNN
-	1    6350 5450
+P 5950 5150
+F 0 "C?" H 5975 5250 50  0000 L CNN
+F 1 "0.1uF" H 5975 5050 50  0000 L CNN
+F 2 "" H 5988 5000 50  0000 C CNN
+F 3 "" H 5950 5150 50  0000 C CNN
+	1    5950 5150
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C?
 U 1 1 57DE9DFA
-P 7600 5450
-F 0 "C?" H 7625 5550 50  0000 L CNN
-F 1 "0.1uF" H 7625 5350 50  0000 L CNN
-F 2 "" H 7638 5300 50  0000 C CNN
-F 3 "" H 7600 5450 50  0000 C CNN
-	1    7600 5450
+P 7200 5150
+F 0 "C?" H 7225 5250 50  0000 L CNN
+F 1 "0.1uF" H 7225 5050 50  0000 L CNN
+F 2 "" H 7238 5000 50  0000 C CNN
+F 3 "" H 7200 5150 50  0000 C CNN
+	1    7200 5150
 	1    0    0    -1  
 $EndComp
-Text GLabel 8200 5250 2    39   Input ~ 0
+Text GLabel 7800 4950 2    39   Input ~ 0
 VDD
-Text GLabel 8200 5700 2    39   Input ~ 0
+Text GLabel 7800 5400 2    39   Input ~ 0
 DGND
 $Comp
 L MC78L05ACH U?
 U 1 1 57DEE133
-P 7100 4600
-F 0 "U?" H 6900 4800 50  0000 C CNN
-F 1 "MC78L05ACH" H 7100 4800 50  0000 L CNN
-F 2 "SOT-89" H 7100 4700 50  0000 C CIN
-F 3 "" H 7100 4600 50  0000 C CNN
-	1    7100 4600
+P 3700 5050
+F 0 "U?" H 3500 5250 50  0000 C CNN
+F 1 "MC78L05ACH" H 3700 5250 50  0000 L CNN
+F 2 "SOT-89" H 3700 5150 50  0000 C CIN
+F 3 "" H 3700 5050 50  0000 C CNN
+	1    3700 5050
 	1    0    0    -1  
 $EndComp
 $Comp
 L LM3480-3.3 U?
 U 1 1 57DEE83B
-P 7100 5250
-F 0 "U?" H 6800 5400 50  0000 L CNN
-F 1 "LM3480-3.3" H 7400 5400 50  0000 R CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 7100 4850 50  0001 C CIN
-F 3 "" H 7100 5250 50  0000 C CNN
-	1    7100 5250
+P 6700 4950
+F 0 "U?" H 6400 5100 50  0000 L CNN
+F 1 "LM3480-3.3" H 7000 5100 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 6700 4550 50  0001 C CIN
+F 3 "" H 6700 4950 50  0000 C CNN
+	1    6700 4950
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 57DEEED8
-P 5300 5350
-F 0 "#PWR?" H 5300 5100 50  0001 C CNN
-F 1 "GND" H 5300 5200 50  0000 C CNN
-F 2 "" H 5300 5350 50  0000 C CNN
-F 3 "" H 5300 5350 50  0000 C CNN
-	1    5300 5350
+P 1500 5250
+F 0 "#PWR?" H 1500 5000 50  0001 C CNN
+F 1 "GND" H 1500 5100 50  0000 C CNN
+F 2 "" H 1500 5250 50  0000 C CNN
+F 3 "" H 1500 5250 50  0000 C CNN
+	1    1500 5250
 	1    0    0    -1  
 $EndComp
 $Comp
-L D D?
+L D D1
 U 1 1 57DEEF4F
-P 5550 4900
-F 0 "D?" H 5550 5000 50  0000 C CNN
-F 1 "Light Diode" H 5550 4800 50  0000 C CNN
-F 2 "" H 5550 4900 50  0000 C CNN
-F 3 "" H 5550 4900 50  0000 C CNN
-	1    5550 4900
+P 2250 4800
+F 0 "D1" H 2250 4900 50  0000 C CNN
+F 1 "D" H 2250 4700 50  0000 C CNN
+F 2 "" H 2250 4800 50  0000 C CNN
+F 3 "" H 2250 4800 50  0000 C CNN
+	1    2250 4800
 	-1   0    0    1   
 $EndComp
-Text GLabel 5700 4900 2    39   Input ~ 0
+Text GLabel 2400 4800 2    39   Input ~ 0
 RAW
 $Comp
 L GND #PWR?
 U 1 1 57DEF13A
-P 5950 5700
-F 0 "#PWR?" H 5950 5450 50  0001 C CNN
-F 1 "GND" H 5950 5550 50  0000 C CNN
-F 2 "" H 5950 5700 50  0000 C CNN
-F 3 "" H 5950 5700 50  0000 C CNN
-	1    5950 5700
+P 5550 5400
+F 0 "#PWR?" H 5550 5150 50  0001 C CNN
+F 1 "GND" H 5550 5250 50  0000 C CNN
+F 2 "" H 5550 5400 50  0000 C CNN
+F 3 "" H 5550 5400 50  0000 C CNN
+	1    5550 5400
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR?
 U 1 1 57DEF184
-P 6050 4950
-F 0 "#PWR?" H 6050 4700 50  0001 C CNN
-F 1 "GND" H 6050 4800 50  0000 C CNN
-F 2 "" H 6050 4950 50  0000 C CNN
-F 3 "" H 6050 4950 50  0000 C CNN
-	1    6050 4950
+P 2650 5400
+F 0 "#PWR?" H 2650 5150 50  0001 C CNN
+F 1 "GND" H 2650 5250 50  0000 C CNN
+F 2 "" H 2650 5400 50  0000 C CNN
+F 3 "" H 2650 5400 50  0000 C CNN
+	1    2650 5400
 	1    0    0    -1  
 $EndComp
-Text GLabel 6200 5250 0    39   Input ~ 0
+Text GLabel 5800 4950 0    39   Input ~ 0
 RAW
-Text GLabel 6200 4550 0    39   Input ~ 0
+Text GLabel 2800 5000 0    39   Input ~ 0
 RAW
 Wire Wire Line
-	6200 4550 6700 4550
+	2800 5000 3300 5000
+Connection ~ 4350 5400
+Connection ~ 3700 5400
 Wire Wire Line
-	5300 4900 5300 5050
+	7200 4950 7800 4950
+Connection ~ 5950 5400
+Connection ~ 5950 4950
 Wire Wire Line
-	5400 4900 5300 4900
-Connection ~ 7750 4950
-Connection ~ 7100 4950
-Wire Notes Line
-	2100 1700 2400 1850
+	5800 4950 6200 4950
+Connection ~ 3050 5400
+Connection ~ 3050 5000
+Connection ~ 4350 5000
 Wire Wire Line
-	7600 5250 8200 5250
-Connection ~ 6350 5700
-Connection ~ 6350 5250
-Wire Wire Line
-	6200 5250 6600 5250
-Connection ~ 6450 4950
-Connection ~ 6450 4550
-Connection ~ 7750 4550
-Wire Wire Line
-	7500 4550 8250 4550
-Wire Notes Line
-	3200 2450 3300 2350
+	4100 5000 4850 5000
 Wire Notes Line
 	3800 2450 3500 2300
 Wire Notes Line
@@ -391,8 +375,6 @@ Wire Wire Line
 Wire Wire Line
 	3950 1750 3950 1400
 Connection ~ 3650 1550
-Wire Wire Line
-	3250 1650 3250 1750
 Wire Wire Line
 	5300 4250 5300 2350
 Connection ~ 4350 1650
@@ -439,7 +421,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 4150 3450 4550
 Wire Wire Line
-	3250 4250 3550 4250
+	3250 4250 3750 4250
 Wire Wire Line
 	3250 4150 3250 4250
 Wire Wire Line
@@ -491,9 +473,6 @@ Connection ~ 5300 2600
 Connection ~ 5300 2400
 Connection ~ 5300 3700
 Connection ~ 5300 3300
-Wire Wire Line
-	3150 1750 3150 1650
-Connection ~ 3150 1650
 Wire Wire Line
 	2300 1650 2300 1900
 Wire Wire Line
@@ -559,9 +538,6 @@ Connection ~ 2350 2600
 Connection ~ 2350 2400
 Connection ~ 2350 2200
 Wire Wire Line
-	2600 1650 3250 1650
-Connection ~ 2600 1650
-Wire Wire Line
 	4400 4450 4350 4450
 Wire Wire Line
 	4350 4450 4350 4150
@@ -612,10 +588,6 @@ Wire Wire Line
 	3850 4150 3850 4350
 Connection ~ 3850 4350
 Wire Wire Line
-	3750 4150 3750 4950
-Wire Wire Line
-	3750 4950 3150 4950
-Wire Wire Line
 	5400 2200 6250 2200
 Connection ~ 5500 1100
 Wire Wire Line
@@ -639,26 +611,63 @@ Wire Wire Line
 	7750 3950 7750 4300
 Connection ~ 7750 4300
 Wire Wire Line
-	6050 4950 8250 4950
+	2650 5400 4850 5400
 Wire Wire Line
-	5950 5700 8200 5700
+	5550 5400 7800 5400
 Wire Wire Line
-	6350 5600 6350 5700
+	5950 5300 5950 5400
 Wire Wire Line
-	7100 5550 7100 5700
-Connection ~ 7100 5700
+	6700 5250 6700 5400
+Connection ~ 6700 5400
 Wire Wire Line
-	7600 5600 7600 5700
-Connection ~ 7600 5700
+	7200 5300 7200 5400
+Connection ~ 7200 5400
 Wire Wire Line
-	7600 5300 7600 5250
+	7200 5000 7200 4950
 Wire Wire Line
-	6350 5300 6350 5250
-Connection ~ 7600 5250
+	5950 5000 5950 4950
+Connection ~ 7200 4950
 Wire Wire Line
-	6450 4850 6450 4950
+	3050 5300 3050 5400
 Wire Wire Line
-	7750 4650 7750 4550
+	4350 5100 4350 5000
 Wire Wire Line
-	7100 4850 7100 4950
+	3700 5300 3700 5400
+Wire Wire Line
+	3150 1750 3150 1650
+Wire Wire Line
+	3150 1650 2600 1650
+Connection ~ 2600 1650
+NoConn ~ 3250 1750
+NoConn ~ 3050 4150
+NoConn ~ 3150 4150
+Text Notes 2850 1550 0    39   ~ 0
+Connect to something or \nto leave open?
+Wire Notes Line
+	3350 1500 3500 1700
+Wire Notes Line
+	3500 1700 3200 1700
+Wire Wire Line
+	3750 4250 3750 4150
+Connection ~ 3550 4250
+NoConn ~ 4250 4150
+NoConn ~ 4050 4150
+NoConn ~ 3050 1750
+Text Notes 6200 5550 0    59   ~ 0
+DIGITAL POWER SUPPLY 3.3V
+Text Notes 3200 5550 0    59   ~ 0
+ANALOG POWER SUPPLY 5V
+$Comp
+L SW_PUSH SW1
+U 1 1 57DF69A4
+P 1800 4800
+F 0 "SW1" H 1950 4910 50  0000 C CNN
+F 1 "PUSH" H 1800 4720 50  0000 C CNN
+F 2 "" H 1800 4800 50  0000 C CNN
+F 3 "" H 1800 4800 50  0000 C CNN
+	1    1800 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 4800 1500 4950
 $EndSCHEMATC
