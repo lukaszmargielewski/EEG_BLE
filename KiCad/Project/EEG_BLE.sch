@@ -60,7 +60,7 @@ L R R1
 U 1 1 57D49926
 P 2450 1650
 F 0 "R1" V 2530 1650 50  0000 C CNN
-F 1 "1M" V 2450 1650 50  0000 C CNN
+F 1 "392k" V 2450 1650 50  0000 C CNN
 F 2 "" V 2380 1650 50  0000 C CNN
 F 3 "" H 2450 1650 50  0000 C CNN
 	1    2450 1650
@@ -71,7 +71,7 @@ L C C1
 U 1 1 57D5BB9F
 P 2450 1900
 F 0 "C1" H 2475 2000 50  0000 L CNN
-F 1 "1nF" H 2475 1800 50  0000 L CNN
+F 1 "10nF" H 2475 1800 50  0000 L CNN
 F 2 "" H 2488 1750 50  0000 C CNN
 F 3 "" H 2450 1900 50  0000 C CNN
 	1    2450 1900
@@ -179,6 +179,132 @@ F 3 "" H 4200 1250 50  0000 C CNN
 $EndComp
 Text GLabel 3150 4950 0    60   Input ~ 0
 VREFP
+Text Notes 2200 5100 0    60   ~ 0
+Where does \nVREFP connect to?
+Text Notes 2250 4300 0    43   ~ 0
+Do SRB1 and SRB2 \nneed to be connected \nto something \n(in this bias drive setup)?
+Text Notes 1450 3300 0    39   ~ 0
+Do I need \nRC circuits\non electrodes?
+Text Notes 3000 2600 0    31   ~ 0
+Do I need to connect \nBIASINV to something?
+Text Notes 2900 1600 0    39   ~ 0
+Do BIASOUT and BIASIN \nneed to be connected \nand why?
+Text Notes 2000 1550 0    47   ~ 0
+What is the optimum \nresistor value \nfor this bias drive?
+Text Notes 6000 1000 0    59   ~ 0
+3.3v (regulated)
+Text Notes 2500 850  0    59   ~ 0
+5V (regulated)
+$Comp
+L Battery BATTERY
+U 1 1 57DE7944
+P 5600 4850
+F 0 "BATTERY" H 5700 4900 50  0000 L CNN
+F 1 "5V" H 5700 4800 50  0000 L CNN
+F 2 "" V 5600 4890 50  0000 C CNN
+F 3 "" V 5600 4890 50  0000 C CNN
+	1    5600 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ADS1299 U1
+U 1 1 57D3263D
+P 3800 2950
+F 0 "U1" H 3800 2750 60  0000 C CNN
+F 1 "ADS1299" H 3800 3150 60  0000 C CNN
+F 2 "" H 3800 2950 60  0001 C CNN
+F 3 "" H 3800 2950 60  0001 C CNN
+	1    3800 2950
+	1    0    0    -1  
+$EndComp
+Text Notes 3700 2600 0    31   ~ 0
+Do I need BIASREf?\nAdvantages over internal?
+Text Notes 2500 950  0    39   ~ 0
+Is unipolar or bipolar better?
+Text Notes 6000 1250 0    43   ~ 0
+Can it share ground \nwith analog supply \n(connected DGND and VSS)?
+Text Notes 1400 1700 0    43   ~ 0
+Is capacitor \n(RC circuit)\nneeded here? \nHow to choose its value?
+Text Notes 1450 3550 0    39   ~ 0
+If YES, \nhow to choose \nRC values?
+Text Notes 4600 4650 0    43   ~ 0
+Enought capacitors?\nWould ground and supply \nplanes be better instead?
+Text Notes 4250 1000 0    43   ~ 0
+Enought capacitros?\nWould ground and supply \nplanes be better instead?
+$Comp
+L LP2987AIMM-5.0/NOPB U?
+U 1 1 57DE8D4A
+P 7200 4750
+F 0 "U?" H 6900 5050 50  0000 C CNN
+F 1 "LP2987AIMM-5.0/NOPB" H 7400 5050 50  0000 C CNN
+F 2 "MSOP-8" H 7200 4750 50  0000 C CIN
+F 3 "" H 7200 4750 50  0000 C CNN
+	1    7200 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 57DE8FE2
+P 7950 4950
+F 0 "C?" H 7975 5050 50  0000 L CNN
+F 1 "C" H 7975 4850 50  0000 L CNN
+F 2 "" H 7988 4800 50  0000 C CNN
+F 3 "" H 7950 4950 50  0000 C CNN
+	1    7950 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 57DE91C6
+P 6450 4900
+F 0 "C?" H 6475 5000 50  0000 L CNN
+F 1 "C" H 6475 4800 50  0000 L CNN
+F 2 "" H 6488 4750 50  0000 C CNN
+F 3 "" H 6450 4900 50  0000 C CNN
+	1    6450 4900
+	1    0    0    -1  
+$EndComp
+Text GLabel 8250 4700 2    39   Input ~ 0
+AVDD
+Text GLabel 8250 5150 2    39   Input ~ 0
+AVSS
+$Comp
+L LP2987IMMX-3.3/NOPB U?
+U 1 1 57DE9BCA
+P 7200 5600
+F 0 "U?" H 6900 5900 50  0000 C CNN
+F 1 "LP2987IMMX-3.3/NOPB" H 7400 5900 50  0000 C CNN
+F 2 "MSOP-8" H 7200 5600 50  0000 C CIN
+F 3 "" H 7200 5600 50  0000 C CNN
+	1    7200 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 57DE9DA6
+P 6450 5700
+F 0 "C?" H 6475 5800 50  0000 L CNN
+F 1 "C" H 6475 5600 50  0000 L CNN
+F 2 "" H 6488 5550 50  0000 C CNN
+F 3 "" H 6450 5700 50  0000 C CNN
+	1    6450 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 57DE9DFA
+P 7950 5700
+F 0 "C?" H 7975 5800 50  0000 L CNN
+F 1 "C" H 7975 5600 50  0000 L CNN
+F 2 "" H 7988 5550 50  0000 C CNN
+F 3 "" H 7950 5700 50  0000 C CNN
+	1    7950 5700
+	1    0    0    -1  
+$EndComp
+Text GLabel 8300 5550 2    39   Input ~ 0
+VDD
+Text GLabel 8300 5950 2    39   Input ~ 0
+DGND
 Connection ~ 7750 4300
 Wire Wire Line
 	7750 3950 7750 4300
@@ -435,54 +561,12 @@ Wire Wire Line
 	3950 4450 3950 4150
 Wire Wire Line
 	4150 4450 4150 4150
-Text Notes 1750 5000 0    60   ~ 0
-Where does VREFP go?
-Text Notes 2300 4300 0    39   ~ 0
-Do SRB1 and SRB2 \nneed to be connected \nto something \n(in this bias drive setup)?
-Text Notes 1450 3300 0    35   ~ 0
-Do I need \nRC circuits\non electrodes?
-Text Notes 3000 2600 0    31   ~ 0
-Do I need to connect \nBIASINV to something?
-Text Notes 2850 1650 0    39   ~ 0
-Do BIASOUT and BIASIN \nneed to be connected \nand why?
-Text Notes 2000 1550 0    39   ~ 0
-What is the optimum \nresistor value \nfor this bias drive?
 Wire Notes Line
 	2200 1550 2300 1600
-Text Notes 6000 1000 0    59   ~ 0
-3.3v (regulated)
-Text Notes 2500 850  0    59   ~ 0
-5V (regulated)
-$Comp
-L Battery BATTERY
-U 1 1 57DE7944
-P 5900 4700
-F 0 "BATTERY" H 6000 4750 50  0000 L CNN
-F 1 "5V" H 6000 4650 50  0000 L CNN
-F 2 "" V 5900 4740 50  0000 C CNN
-F 3 "" V 5900 4740 50  0000 C CNN
-	1    5900 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L ADS1299 U1
-U 1 1 57D3263D
-P 3800 2950
-F 0 "U1" H 3800 2750 60  0000 C CNN
-F 1 "ADS1299" H 3800 3150 60  0000 C CNN
-F 2 "" H 3800 2950 60  0001 C CNN
-F 3 "" H 3800 2950 60  0001 C CNN
-	1    3800 2950
-	1    0    0    -1  
-$EndComp
-Text Notes 3700 2600 0    31   ~ 0
-Do I need BIASREf?\nAdvantages over internal?
 Wire Notes Line
 	3800 2450 3500 2300
 Wire Notes Line
 	3200 2450 3300 2350
-Text Notes 2500 950  0    39   ~ 0
-Is unipolar or bipolar better?
 Wire Notes Line
 	2450 750  2450 1000
 Wire Notes Line
@@ -490,11 +574,7 @@ Wire Notes Line
 Wire Notes Line
 	3400 1000 3400 750 
 Wire Notes Line
-	3400 750  2450 750 
-Wire Notes Line
 	2450 800  2450 850 
-Text Notes 6000 1250 0    39   ~ 0
-Can it share ground \nwith analog supply \n(connected DGND and VSS)?
 Wire Notes Line
 	5950 850  5950 1300
 Wire Notes Line
@@ -503,119 +583,32 @@ Wire Notes Line
 	6900 1300 6900 850 
 Wire Notes Line
 	6900 850  5950 850 
-Text Notes 1750 2000 0    28   ~ 0
-Is capacitor \n(RC circuit)\nneeded here? \nHow to choose its value?
-Wire Notes Line
-	2050 2000 2050 2050
-Wire Notes Line
-	2050 2050 2450 2050
-Wire Notes Line
-	2450 2050 2450 1900
-Text Notes 1450 3550 0    39   ~ 0
-If YES, \nhow to choose \nRC values?
-Text Notes 4550 4600 0    39   ~ 0
-Enought capacitors?\nWould ground and supply \nplanes be better instead?
-Text Notes 4250 1000 0    39   ~ 0
-Enought capacitros?\nWould ground and supply \nplanes be better instead?
 Wire Wire Line
-	5900 4550 6700 4550
-$Comp
-L LP2987AIMM-5.0/NOPB U?
-U 1 1 57DE8D4A
-P 7200 4750
-F 0 "U?" H 6900 5050 50  0000 C CNN
-F 1 "LP2987AIMM-5.0/NOPB" H 7400 5050 50  0000 C CNN
-F 2 "MSOP-8" H 7200 4750 50  0000 C CIN
-F 3 "" H 7200 4750 50  0000 C CNN
-	1    7200 4750
-	1    0    0    -1  
-$EndComp
+	5600 4550 6700 4550
 Wire Wire Line
-	5900 4850 5900 5950
-Wire Wire Line
-	5900 5150 8250 5150
+	5600 5150 8250 5150
 Wire Wire Line
 	7200 5150 7200 5100
 Connection ~ 7200 5150
 Wire Wire Line
 	7700 4700 8250 4700
-$Comp
-L C C?
-U 1 1 57DE8FE2
-P 7950 4950
-F 0 "C?" H 7975 5050 50  0000 L CNN
-F 1 "C" H 7975 4850 50  0000 L CNN
-F 2 "" H 7988 4800 50  0000 C CNN
-F 3 "" H 7950 4950 50  0000 C CNN
-	1    7950 4950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7950 4800 7950 4700
 Connection ~ 7950 4700
 Wire Wire Line
 	7950 5100 7950 5150
 Connection ~ 7950 5150
-$Comp
-L C C?
-U 1 1 57DE91C6
-P 6450 4900
-F 0 "C?" H 6475 5000 50  0000 L CNN
-F 1 "C" H 6475 4800 50  0000 L CNN
-F 2 "" H 6488 4750 50  0000 C CNN
-F 3 "" H 6450 4900 50  0000 C CNN
-	1    6450 4900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6450 4550 6450 4750
 Connection ~ 6450 4550
 Wire Wire Line
 	6450 5050 6450 5150
 Connection ~ 6450 5150
-Text GLabel 8250 4700 2    39   Input ~ 0
-AVDD
-Text GLabel 8250 5150 2    39   Input ~ 0
-AVSS
-$Comp
-L LP2987IMMX-3.3/NOPB U?
-U 1 1 57DE9BCA
-P 7200 5600
-F 0 "U?" H 6900 5900 50  0000 C CNN
-F 1 "LP2987IMMX-3.3/NOPB" H 7400 5900 50  0000 C CNN
-F 2 "MSOP-8" H 7200 5600 50  0000 C CIN
-F 3 "" H 7200 5600 50  0000 C CNN
-	1    7200 5600
-	1    0    0    -1  
-$EndComp
-Connection ~ 5900 5150
 Wire Wire Line
 	6300 4550 6300 5400
 Wire Wire Line
 	6300 5400 6700 5400
 Connection ~ 6300 4550
-$Comp
-L C C?
-U 1 1 57DE9DA6
-P 6450 5700
-F 0 "C?" H 6475 5800 50  0000 L CNN
-F 1 "C" H 6475 5600 50  0000 L CNN
-F 2 "" H 6488 5550 50  0000 C CNN
-F 3 "" H 6450 5700 50  0000 C CNN
-	1    6450 5700
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C?
-U 1 1 57DE9DFA
-P 7950 5700
-F 0 "C?" H 7975 5800 50  0000 L CNN
-F 1 "C" H 7975 5600 50  0000 L CNN
-F 2 "" H 7988 5550 50  0000 C CNN
-F 3 "" H 7950 5700 50  0000 C CNN
-	1    7950 5700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6450 5550 6450 5400
 Connection ~ 6450 5400
@@ -626,13 +619,18 @@ Connection ~ 7200 5950
 Wire Wire Line
 	7700 5550 8300 5550
 Wire Wire Line
-	5900 5950 8300 5950
+	5600 5950 8300 5950
 Wire Wire Line
 	7950 5850 7950 5950
 Connection ~ 7950 5950
 Connection ~ 7950 5550
-Text GLabel 8300 5550 2    39   Input ~ 0
-VDD
-Text GLabel 8300 5950 2    39   Input ~ 0
-DGND
+Wire Wire Line
+	5600 4550 5600 4700
+Wire Wire Line
+	5600 5000 5600 5950
+Connection ~ 5600 5150
+Wire Notes Line
+	3400 750  2450 750 
+Wire Notes Line
+	2100 1700 2400 1850
 $EndSCHEMATC
