@@ -60,7 +60,7 @@ L R R1
 U 1 1 57D49926
 P 2450 1650
 F 0 "R1" V 2530 1650 50  0000 C CNN
-F 1 "392k" V 2450 1650 50  0000 C CNN
+F 1 "1M" V 2450 1650 50  0000 C CNN
 F 2 "" V 2380 1650 50  0000 C CNN
 F 3 "" H 2450 1650 50  0000 C CNN
 	1    2450 1650
@@ -180,7 +180,7 @@ $EndComp
 Text Notes 2000 4500 0    47   ~ 0
 Can VREFP connect to AVDD \nand VREFN connect to AVSS \nsimply just like here?
 Text Notes 2000 4200 0    43   ~ 0
-Do SRB1 and SRB2 \nneed to be connected \nto something, f.ex: AVSS\n(in this bias drive setup)?
+Do SRB1 and SRB2 \nneed to be connected \nto something, f.ex: AVSS?
 Text Notes 1450 3300 0    39   ~ 0
 Do I need \nRC circuits\non electrodes?
 Text Notes 2000 1550 0    47   ~ 0
