@@ -123,34 +123,34 @@ $EndComp
 $Comp
 L C C4
 U 1 1 57DCFEE7
-P 3900 4600
-F 0 "C4" H 3925 4700 50  0000 L CNN
-F 1 "1uF" H 3925 4500 50  0000 L CNN
-F 2 "" H 3938 4450 50  0000 C CNN
-F 3 "" H 3900 4600 50  0000 C CNN
-	1    3900 4600
+P 4050 4600
+F 0 "C4" H 4075 4700 50  0000 L CNN
+F 1 "1uF" H 4075 4500 50  0000 L CNN
+F 2 "" H 4088 4450 50  0000 C CNN
+F 3 "" H 4050 4600 50  0000 C CNN
+	1    4050 4600
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C5
 U 1 1 57DCFF14
-P 4150 4600
-F 0 "C5" H 4175 4700 50  0000 L CNN
-F 1 "100uF" H 4175 4500 50  0000 L CNN
-F 2 "" H 4188 4450 50  0000 C CNN
-F 3 "" H 4150 4600 50  0000 C CNN
-	1    4150 4600
+P 4250 4600
+F 0 "C5" H 4275 4700 50  0000 L CNN
+F 1 "100uF" H 4275 4500 31  0000 L CNN
+F 2 "" H 4288 4450 50  0000 C CNN
+F 3 "" H 4250 4600 50  0000 C CNN
+	1    4250 4600
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C6
 U 1 1 57DCFF41
-P 4400 4600
-F 0 "C6" H 4425 4700 50  0000 L CNN
-F 1 "1uF" H 4425 4500 50  0000 L CNN
-F 2 "" H 4438 4450 50  0000 C CNN
-F 3 "" H 4400 4600 50  0000 C CNN
-	1    4400 4600
+P 4450 4600
+F 0 "C6" H 4475 4700 50  0000 L CNN
+F 1 "1uF" H 4475 4500 50  0000 L CNN
+F 2 "" H 4488 4450 50  0000 C CNN
+F 3 "" H 4450 4600 50  0000 C CNN
+	1    4450 4600
 	1    0    0    -1  
 $EndComp
 Text GLabel 3100 4550 0    60   Input ~ 0
@@ -177,10 +177,8 @@ F 3 "" H 4200 1250 50  0000 C CNN
 	1    4200 1250
 	1    0    0    -1  
 $EndComp
-Text Notes 2000 4500 0    47   ~ 0
-Can VREFP connect to AVDD \nand VREFN connect to AVSS \nsimply just like here?
 Text Notes 2000 4200 0    43   ~ 0
-Do SRB1 and SRB2 \nneed to be connected \nto something, f.ex: AVSS\n(in this bias drive setup)?
+Do SRB1 and SRB2 \nneed to be connected \nto something, f.ex: AVSS?
 Text Notes 1450 3300 0    39   ~ 0
 Do I need \nRC circuits\non electrodes?
 Text Notes 2000 1550 0    47   ~ 0
@@ -213,14 +211,8 @@ F 3 "" H 3800 2950 60  0001 C CNN
 $EndComp
 Text Notes 3800 2600 0    39   ~ 0
 Do I need BIASREf?\nAdvantages over internal?
-Text Notes 4700 5300 0    39   ~ 0
-Is unipolar or bipolar better?
-Text Notes 7850 5300 0    43   ~ 0
-Can it share ground \nwith analog supply?
 Text Notes 1450 3550 0    39   ~ 0
 If YES, \nhow to choose \nthe values?
-Text Notes 4600 4650 0    43   ~ 0
-Enought capacitors?\nWould ground and supply \nplanes be better instead?
 Text Notes 4250 1000 0    43   ~ 0
 Enought capacitros?\nWould ground and supply planes be better instead?
 $Comp
@@ -367,12 +359,6 @@ Wire Notes Line
 Wire Notes Line
 	2200 1550 2300 1600
 Wire Wire Line
-	4150 4450 4150 4150
-Wire Wire Line
-	3950 4450 3950 4150
-Wire Wire Line
-	3900 4450 3950 4450
-Wire Wire Line
 	3950 1750 3950 1400
 Connection ~ 3650 1550
 Wire Wire Line
@@ -420,8 +406,6 @@ Wire Wire Line
 	3550 4250 3550 4150
 Wire Wire Line
 	3450 4150 3450 4550
-Wire Wire Line
-	3250 4250 3750 4250
 Wire Wire Line
 	3250 4150 3250 4250
 Wire Wire Line
@@ -538,17 +522,11 @@ Connection ~ 2350 2600
 Connection ~ 2350 2400
 Connection ~ 2350 2200
 Wire Wire Line
-	4400 4450 4350 4450
-Wire Wire Line
-	4350 4450 4350 4150
-Wire Wire Line
 	4450 4150 4450 4250
 Wire Wire Line
 	4450 4250 5300 4250
 Wire Wire Line
 	3450 4550 3100 4550
-Wire Wire Line
-	3100 4750 4400 4750
 Wire Wire Line
 	4350 1300 5600 1300
 Wire Wire Line
@@ -572,8 +550,7 @@ Wire Wire Line
 Wire Wire Line
 	3750 1100 3100 1100
 Connection ~ 3650 4750
-Connection ~ 4150 4750
-Connection ~ 3900 4750
+Connection ~ 4050 4750
 Connection ~ 3650 1300
 Wire Wire Line
 	3650 900  4200 900 
@@ -584,9 +561,6 @@ Wire Wire Line
 Connection ~ 3950 900 
 Wire Wire Line
 	3950 1400 4200 1400
-Wire Wire Line
-	3850 4150 3850 4350
-Connection ~ 3850 4350
 Wire Wire Line
 	5400 2200 6250 2200
 Connection ~ 5500 1100
@@ -647,8 +621,6 @@ Wire Notes Line
 	3350 1500 3500 1700
 Wire Notes Line
 	3500 1700 3200 1700
-Wire Wire Line
-	3750 4250 3750 4150
 Connection ~ 3550 4250
 NoConn ~ 4250 4150
 NoConn ~ 4050 4150
@@ -670,4 +642,42 @@ F 3 "" H 1800 4800 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	1500 4800 1500 4950
+Wire Wire Line
+	3250 4250 3550 4250
+$Comp
+L C C?
+U 1 1 57E22DA7
+P 3850 4600
+F 0 "C?" H 3875 4700 50  0000 L CNN
+F 1 "C" H 3875 4500 50  0000 L CNN
+F 2 "" H 3888 4450 50  0000 C CNN
+F 3 "" H 3850 4600 50  0000 C CNN
+	1    3850 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4750 3750 4150
+Wire Wire Line
+	3850 4150 3850 4450
+Connection ~ 3750 4750
+Connection ~ 3850 4750
+Wire Wire Line
+	4050 4450 3950 4450
+Wire Wire Line
+	3950 4450 3950 4150
+Wire Wire Line
+	4250 4450 4250 4400
+Wire Wire Line
+	4250 4400 4150 4400
+Wire Wire Line
+	4150 4400 4150 4150
+Wire Wire Line
+	4450 4450 4450 4300
+Wire Wire Line
+	4450 4300 4350 4300
+Wire Wire Line
+	4350 4300 4350 4150
+Wire Wire Line
+	3100 4750 4450 4750
+Connection ~ 4250 4750
 $EndSCHEMATC
