@@ -670,8 +670,6 @@ Wire Wire Line
 	5550 3000 5300 3000
 Wire Wire Line
 	5650 3100 5300 3100
-Wire Wire Line
-	5300 3500 6300 3500
 Connection ~ 5400 3700
 Connection ~ 4450 1450
 Wire Wire Line
@@ -721,10 +719,8 @@ Wire Wire Line
 Wire Wire Line
 	5300 2300 5500 2300
 Wire Wire Line
-	5500 2300 5500 2400
-Wire Wire Line
-	5500 2400 6300 2400
-Text GLabel 6300 2400 2    60   Input ~ 0
+	5500 2300 5500 2550
+Text GLabel 6300 2550 2    60   Input ~ 0
 DRDY
 Text GLabel 6300 2050 2    60   Input ~ 0
 DGND
@@ -739,7 +735,7 @@ Text GLabel 6300 2900 2    60   Input ~ 0
 SPI_CS
 Text GLabel 6300 3000 2    60   Input ~ 0
 SPI_DIN
-Text GLabel 6300 3500 2    60   Input ~ 0
+Text GLabel 6300 3200 2    60   Input ~ 0
 PWDN
 Wire Wire Line
 	5300 3200 5400 3200
@@ -758,4 +754,22 @@ Wire Wire Line
 	3250 1500 3550 1500
 Wire Wire Line
 	6300 2050 5400 2050
+Wire Wire Line
+	5500 2550 6300 2550
+Wire Wire Line
+	6300 3200 5950 3200
+Wire Wire Line
+	5950 3200 5950 3500
+Wire Wire Line
+	5950 3500 5300 3500
+Wire Notes Line
+	6200 2400 6200 3400
+Wire Notes Line
+	6200 3400 6850 3400
+Wire Notes Line
+	6850 3400 6850 2400
+Wire Notes Line
+	6850 2400 6200 2400
+Text Notes 6250 3350 0    31   ~ 0
+Interface (decoupled)
 $EndSCHEMATC
